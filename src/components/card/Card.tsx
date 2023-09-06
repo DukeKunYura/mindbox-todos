@@ -1,5 +1,7 @@
 import { FC } from 'react';
-import { IDataItem } from '../../components/interfaces/data';
+import { IDataItem } from '../../interfaces/data';
+import { toggleCompleted } from '../../redux/masterSlice';
+import { useAppDispatch } from '../../redux/hoocks';
 
 /**
  * Компонент рендерит карточку тудушки с данными из props
@@ -9,6 +11,8 @@ const Card: FC<IDataItem> = ({
     completed,
     id,
 }) => {
+    const dispatch = useAppDispatch();
+
 
     return (
         <div className='cardOut'>
@@ -16,6 +20,12 @@ const Card: FC<IDataItem> = ({
                 <div className='cardTitle'>
                     {title}
                 </div>
+                <input
+                    className='checker'
+                    type='checkbox'
+                    checked={completed}
+                    onChange={() => { dispatch(toggleCompleted(id)) }}>
+                </input>
             </div>
         </div>
 
