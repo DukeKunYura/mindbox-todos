@@ -11,7 +11,7 @@ type Props = {
 /**
  * Компонент рендерит карточку тудушки с данными из props
  */
-const Card: FC<Props> = ({ quantity }) => {
+const Menu: FC<Props> = ({ quantity }) => {
     const dispatch = useAppDispatch();
     const activeLink = useAppSelector<TLink>((state) => state.master.activeLink);
 
@@ -49,4 +49,4 @@ const Card: FC<Props> = ({ quantity }) => {
     );
 };
 
-export default Card;
+export default Menu;
