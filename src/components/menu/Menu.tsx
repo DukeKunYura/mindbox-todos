@@ -21,7 +21,6 @@ const Card: FC<Props> = ({ quantity }) => {
                 className={styles.info}>
                 {quantity + " items left"}
             </div>
-
             <div className={styles.filters}>
                 <button
                     className={activeLink === "all" ? styles.active : styles.button}
