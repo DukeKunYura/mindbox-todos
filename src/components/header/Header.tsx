@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import styles from './Header.module.css';
 
 /**
  * Компонент рендерит хедер с общим количеством карточек
@@ -6,8 +7,8 @@ import { FC } from 'react';
 const Header: FC = () => {
 
     return (
-        <div className='header'>
-            <div className='today'>Today</div>
+        <div className={styles.header}>
+            todos
         </div>
 
     );

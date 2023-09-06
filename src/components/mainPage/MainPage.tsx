@@ -7,6 +7,7 @@ import { setTodos } from '../../redux/masterSlice';
 import { getData } from '../../api/api';
 import Menu from '../menu/Menu';
 import AddForm from '../addForm/AddForm';
+import styles from './MainPage.module.css'
 
 
 /**
@@ -38,11 +39,10 @@ const Main: FC = () => {
   }, [todos, activeLink]);
 
   return (
-    <div className='section'>
+    <div className={styles.section}>
       <Header />
-      <Menu quantity={todos.filter(todo => todo.completed === false).length} />
       <AddForm />
-      <div className='cards'>
+      <div className={styles.cards}>
         {todoList.map(item =>
           <Card
             key={item.id}
@@ -52,6 +52,7 @@ const Main: FC = () => {
             userId={item.userId}
           />)}
       </div>
+      <Menu quantity={todos.filter(todo => todo.completed === false).length} />
     </div>
   );
 };

@@ -1,0 +1,38 @@
+.cardOut {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 460px;
+    padding: 2px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    border: 5px;
+    border-radius: 6px;
+    background-color: rgb(233, 235, 235);
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    width: 454px;
+    border: 5px;
+    border-radius: 6px;
+    background-color: rgb(255, 255, 255);
+
+}
+
+.cardTitle {
+    width: 370px;
+    margin: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    color: #555555;
+}
+
+.checker {
+    margin: 10px;
+}

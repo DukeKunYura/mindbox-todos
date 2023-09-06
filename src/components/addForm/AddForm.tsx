@@ -3,6 +3,7 @@ import { IDataItem } from '../../interfaces/data';
 import { nanoid } from 'nanoid';
 import { useAppDispatch } from '../../redux/hoocks';
 import { addTodo } from '../../redux/masterSlice';
+import styles from './AddForm.module.css'
 
 /**
  * Компонент рендерит карточку тудушки с данными из props
@@ -33,14 +34,15 @@ const Card: FC = () => {
 
     return (
         <div>
-            <form ref={formRef} onSubmit={e => handleSubmit(e)}>
+            <form className={styles.form} ref={formRef} onSubmit={e => handleSubmit(e)}>
                 <input
+                    className={styles.input}
                     type='text'
                     name="text"
-                    placeholder={"туду что туду"}
+                    placeholder={"what needs to be done"}
                 >
                 </input>
-                <button type='submit'></button>
+                <button className={styles.button} type='submit'>add</button>
             </form>
 
 
