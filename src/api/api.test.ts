@@ -4,9 +4,9 @@ import axios from 'axios'
 
 vi.mock('axios')
 
-describe('Users Service', () => {
-    describe('fetchUsers', () => {
-        test('makes a GET request to fetch users', async () => {
+describe('Todos fetch api', () => {
+    describe('fetchTodos', () => {
+        test('makes a GET request to fetch todos', async () => {
             const todosMock = [{
                 id: 1,
                 title: "string",
