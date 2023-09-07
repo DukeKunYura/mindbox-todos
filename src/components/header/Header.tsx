@@ -2,7 +2,7 @@ import { FC } from 'react';
 import styles from './Header.module.css';
 
 /**
- * Компонент рендерит хедер с общим количеством карточек
+ * Компонент рендерит хедер
  */
 const Header: FC = () => {
 

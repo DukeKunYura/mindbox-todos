@@ -9,7 +9,7 @@ type Props = {
 };
 
 /**
- * Компонент рендерит карточку тудушки с данными из props
+ * Компонент рендерит меню управления фильтрами и очисткой выполненных
  */
 const Menu: FC<Props> = ({ quantity }) => {
     const dispatch = useAppDispatch();

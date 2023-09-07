@@ -6,9 +6,9 @@ import { addTodo } from '../../redux/masterSlice';
 import styles from './AddForm.module.css'
 
 /**
- * Компонент рендерит карточку тудушки с данными из props
+ * Компонент отвечает за добавление нового todo
  */
-const Card: FC = () => {
+const AddForm: FC = () => {
     const formRef = useRef<HTMLFormElement>(null);
     const dispatch = useAppDispatch();
 
@@ -44,11 +44,9 @@ const Card: FC = () => {
                 </input>
                 <button className={styles.button} type='submit'>add</button>
             </form>
-
-
         </div>
 
     );
 };
 
-export default Card;
+export default AddForm;
